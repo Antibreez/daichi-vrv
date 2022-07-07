@@ -1,0 +1,44 @@
+.dealers-and-partners {
+    position: absolute;
+    padding: 20px 0;
+    min-width: 170px;
+    text-align: left;
+    border-radius: 7px;
+    top: 65px;
+    right: -webkit-calc(0% - 85px);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #f6f6f6;
+    z-index: 2000;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+    color: #000!important;
+    display: none;
+}
+
+.js-dealers-and-partners-popup:hover {
+    cursor: pointer;
+    color: #00adef;
+}
+
+.dealers-and-partners:before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 57px;
+    height: 27px;
+    background: url(/local/templates/b2c/build/img/svg/pipka.svg) no-repeat 50%;
+    background-size: contain;
+}
+
+.dealers-and-partners-content {
+    color: black;
+}
+
+.dealers-and-partners-content:hover {
+    color: #00adef;
+}

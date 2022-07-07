@@ -1,0 +1,56 @@
+input:not([type]), input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  vertical-align: top;
+  outline: none;
+  zoom: 1;
+  border-radius: 3px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  font-family: gotham_pro, Arial, Helvetica, Helvetica CY, Nimbus Sans L, sans-serif;
+  font-weight: 100;
+  background-color: #fff;
+  border-color: #ccc;
+  color: #000;
+  height: 48px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-size: .875rem;
+}
+
+
+.btn, button, input[type=button], input[type=reset], input[type=submit] {
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  border-radius: 24px;
+  clear: both;
+  margin: 0 -4px 16px 0;
+  padding: 0;
+  font-family: gotham_pro, Arial, Helvetica, Helvetica CY, Nimbus Sans L, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+  outline: none;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #00adef;
+  border-color: #00adef;
+  color: #fff;
+  fill: #fff;
+  border-width: 1px;
+  height: 48px;
+  padding-right: 48px;
+  padding-left: 48px;
+  font-size: 15px;
+  font-size: .9375rem;
+  line-height: 46px;
+  line-height: 2.875rem
+}

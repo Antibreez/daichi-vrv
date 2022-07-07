@@ -1,0 +1,25 @@
+.vrf-nav {
+  padding: 28px 0;
+  background-color: #f6f6f6;
+}
+
+.vrf-nav__item {
+  width: max-content;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.vrf-nav__link {
+  font-size: 15px;
+  line-height: 23px;
+  color: #888;
+  text-decoration: none;
+  border: none;
+  font-weight: 400;
+
+  &.active {
+    color: #00adef;
+  }
+}

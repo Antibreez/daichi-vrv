@@ -1,0 +1,1 @@
+<a href="<?=MAIN_DAICHI_URL?>/disclaimer/">Правила и условия</a>

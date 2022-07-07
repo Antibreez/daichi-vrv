@@ -1213,11 +1213,26 @@ BX.setCSSList(['/bitrix/js/main/lazyload/dist/lazyload.bundle.css','/bitrix/js/m
       </div>
 
       <div class="vrf-about__tabs">
-
+        <div class="vrf-about__tabs-slider swiper">
+          <div class="vrf-about__tabs-wrapper swiper-wrapper">
+            <div class="vrf-about__tabs-item swiper-slide active" data-block="how-work-slider">
+              Как работает<br>
+              мультизональная система?
+            </div>
+            <div class="vrf-about__tabs-item swiper-slide" data-block="vrf-types-slider">
+              Какие бывают<br>
+              мультизональные системы?
+            </div>
+            <div class="vrf-about__tabs-item swiper-slide" data-block="vrf-parts-slider">
+              Из чего состоит<br>
+              мультизональная система?
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="vrf-about__tab-block">
-        <div class="vrf-about__slider-block" id="how-work-slider">
+      <div class="vrf-about__tab-block" id="how-work-slider" style="display: block;">
+        <div class="vrf-about__slider-block">
           <div class="vrf-about__slider swiper">
             <div class="vrf-about__slider-wrapper swiper-wrapper">
               <div class="vrf-about__slide swiper-slide">
@@ -1259,6 +1274,185 @@ BX.setCSSList(['/bitrix/js/main/lazyload/dist/lazyload.bundle.css','/bitrix/js/m
           </ul>
         </div>
       </div>
+
+      <div class="vrf-about__tab-block" id="vrf-types-slider">
+        <div class="vrf-about__slider-block">
+          <div class="vrf-about__slider swiper">
+            <div class="vrf-about__slider-wrapper swiper-wrapper">
+              <div class="vrf-about__slide swiper-slide">
+                <img src="img/vrf-types-1.jpg" alt="Типы VRF">
+              </div>
+              <div class="vrf-about__slide swiper-slide">
+                <img src="img/vrf-types-2.jpg" alt="Типы VRF">
+              </div>
+              <div class="vrf-about__slide swiper-slide">
+                <img src="img/vrf-types-3.jpg" alt="Типы VRF">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="vrf-about__tab-block-text">
+          <ul>
+            <li>
+              <span class="main">
+                По функциональности
+              </span>
+              <ul>
+                <li>
+                  С&nbsp;тепловым насосом (могут работать на&nbsp;холод или тепло)
+                </li>
+                <li>
+                  С&nbsp;рекуперацией тепла (могут работать на&nbsp;холод и&nbsp;тепло одновременно&nbsp;&mdash; часть внутренних блоков охлаждают помещения, часть&nbsp;&mdash; нагревают). Их&nbsp;часто называют &laquo;трехтрубные&raquo;, хотя не&nbsp;все такие системы на&nbsp;самом деле&nbsp;&mdash; трехтрубные.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="main">
+                По размеру объекта:
+              </span>
+              <ul>
+                <li>
+                  Мини&nbsp;&mdash; для небольших объектов типа коттежда или квартиры
+                </li>
+                <li>
+                  Полноразмерные&nbsp;&mdash; для всех остальных
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="main">
+                По конфигурации наружного блока:
+              </span>
+              <ul>
+                <li>
+                  С&nbsp;горизонтальным выбросом воздуха&nbsp;&mdash; обычно для установки на&nbsp;стене или балконе
+                </li>
+                <li>
+                  С&nbsp;вертикальным выбросом воздуха&nbsp;&mdash; обычно для установки на&nbsp;крыше или другом подобном открытом пространстве
+                </li>
+                <li>
+                  Водяного охлаждения&nbsp;&mdash; для тех случаев, когда нормальную циркуляцию воздуха для наружного блока организовать невозможно или для очень высоких зданий
+                </li>
+                <li>
+                  Экзотические или специальные, например, полностью скрытой установки
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="vrf-about__tab-block" id="vrf-parts-slider">
+        <div class="vrf-about__slider-block">
+          <div class="vrf-about__slider swiper">
+            <div class="vrf-about__slider-wrapper swiper-wrapper">
+              <div class="vrf-about__slide swiper-slide">
+                <img src="img/vrf-parts.jpg" alt="Из чего состоит VRF">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vrf-about__tab-block-text half">
+          <ul>
+            <li>
+              <span class="main">
+                Типовая мультизональная система включает в&nbsp;себя:
+              </span>
+              <ul>
+                <li>
+                  Наружные блоки
+                </li>
+                <li>
+                  Внутренние блоки
+                </li>
+                <li>
+                  Трубопровод хладагента (соединяет внутренние и&nbsp;наружные блоки)
+                </li>
+                <li>
+                  Разветвители (также &laquo;тройники&raquo; или &laquo;рефнеты&raquo;)
+                </li>
+                <li>
+                  Линия связи для обмена данными между внутренними и&nbsp;наружными блоками
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="main">
+                Типовая система может дополняться другими элементами в&nbsp;зависимости от&nbsp;типа и&nbsp;конфигурации:
+              </span>
+              <ul>
+                <li>
+                  Контроллеры ветви. Применяются исключительно в&nbsp;системах с&nbsp;рекуперацией тепла. Эти контроллеры отвечают за&nbsp;переключение режимов работы внутренних блоков.
+                </li>
+                <li>
+                  Системы управления. Это может быть широкий спектр устройств&nbsp;&mdash; от&nbsp;индивидуальных пультов управления, до&nbsp;центральных контроллеров с&nbsp;облачными сервисами.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vrf-area">
+    <div class="container">
+      <h2 class="vrf-area__title">
+        Область применения систем VRF/VRV
+      </h2>
+      <p class="vrf-area__desc">
+        Мультизональные системы VRV и&nbsp;VRF применяются преимущественно в&nbsp;элитных жилых комплексах, коттеджах и&nbsp;загородных домах, офисных помещениях, административных зданиях и&nbsp;торговых комплексах, фитнес&nbsp;&mdash; центрах, производственных помещениях и&nbsp;т.д.
+      </p>
+      <ul class="vrf-area__list">
+        <li class="vrf-area__item">
+          <img src="img/residential.png" alt="residential" class="vrf-area__item-img">
+          <h3 class="vrf-area__item-title">
+            Жилые комплексы
+          </h3>
+          <p class="vrf-area__item-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus pretium posuere. Cras placerat nisi eu rutrum consectetur. Vivamus et massa gravida, dapibus lacus nec, tempor tortor.
+          </p>
+        </li>
+        <li class="vrf-area__item">
+          <img src="img/offices.png" alt="offices" class="vrf-area__item-img">
+          <h3 class="vrf-area__item-title">
+            Офисные помещения
+          </h3>
+          <p class="vrf-area__item-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus pretium posuere. Cras placerat nisi eu rutrum consectetur. Vivamus et massa gravida, dapibus lacus nec, tempor tortor.
+          </p>
+        </li>
+        <li class="vrf-area__item">
+          <img src="img/retail.png" alt="retail" class="vrf-area__item-img">
+          <h3 class="vrf-area__item-title">
+            Ритейл
+          </h3>
+          <p class="vrf-area__item-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus pretium posuere. Cras placerat nisi eu rutrum consectetur. Vivamus et massa gravida, dapibus lacus nec, tempor tortor.
+          </p>
+        </li>
+        <li class="vrf-area__item">
+          <img src="img/cottage.png" alt="cottage" class="vrf-area__item-img">
+          <h3 class="vrf-area__item-title">
+            Коттеджи и загородные дома
+          </h3>
+          <p class="vrf-area__item-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus pretium posuere. Cras placerat nisi eu rutrum consectetur. Vivamus et massa gravida, dapibus lacus nec, tempor tortor.
+          </p>
+        </li>
+        <li class="vrf-area__item">
+          <img src="img/hotels.png" alt="hotels" class="vrf-area__item-img">
+          <h3 class="vrf-area__item-title">
+            Отели (сектор гостеприимства)
+          </h3>
+          <p class="vrf-area__item-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean maximus pretium posuere. Cras placerat nisi eu rutrum consectetur. Vivamus et massa gravida, dapibus lacus nec, tempor tortor.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 

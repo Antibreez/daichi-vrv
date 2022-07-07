@@ -13,6 +13,32 @@ const vrfNavSwiper = new Swiper('.vrf-nav__slider', {
   watchOverflow: true,
 })
 
+const aboutTabsSwiper = new Swiper('.vrf-about__tabs-slider', {
+  modules: [FreeMode],
+
+  freeMode: {
+    enabled: true,
+  },
+
+  slidesPerView: 'auto',
+  watchOverflow: true,
+})
+
+const $aboutTabs = $('.vrf-about__tabs-item')
+const $aboutBlock = $('.vrf-about__tab-block')
+
+$aboutTabs.on('click', function () {
+  if ($(this).hasClass('active')) return
+
+  const name = $(this).attr('data-block')
+
+  $aboutBlock.hide()
+  $aboutTabs.removeClass('active')
+
+  $(this).addClass('active')
+  $(`#${name}`).show()
+})
+
 const howWorkSlider = new Swiper('#how-work-slider .swiper', {
   modules: [Pagination, Navigation],
 
@@ -23,6 +49,21 @@ const howWorkSlider = new Swiper('#how-work-slider .swiper', {
 
   pagination: {
     el: '#how-work-slider .swiper-pagination',
+    type: 'bullets',
+    dynamicBullets: true,
+  },
+})
+
+const vrfTypesSwiper = new Swiper('#vrf-types-slider .swiper', {
+  modules: [Pagination, Navigation],
+
+  navigation: {
+    nextEl: '#vrf-types-slider .swiper-button-next',
+    prevEl: '#vrf-types-slider .swiper-button-prev',
+  },
+
+  pagination: {
+    el: '#vrf-types-slider .swiper-pagination',
     type: 'bullets',
     dynamicBullets: true,
   },

@@ -57,6 +57,7 @@
   padding: 20px;
   font-size: 20px;
   line-height: 24px;
+  font-weight: 400;
   color: #888;
   border-bottom: 4px solid transparent;
 
@@ -101,6 +102,12 @@
   .swiper-button-next {
     transform: rotate(180deg);
     right: -24px;
+  }
+
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    background-color: #dadada;
   }
 }
 

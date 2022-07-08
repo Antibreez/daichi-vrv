@@ -68,3 +68,25 @@ const vrfTypesSwiper = new Swiper('#vrf-types-slider .swiper', {
     dynamicBullets: true,
   },
 })
+
+for (let i = 0; i < $('.vrf-projects__slider-item').length; i++) {
+  $('.vrf-projects__pagination').append(
+    i === 0 ? '<span class="active"></span>' : '<span></span>'
+  )
+}
+
+const projectsSlider = new Swiper('.vrf-projects__slider', {
+  modules: [Navigation],
+
+  navigation: {
+    nextEl: '.vrf-projects .swiper-button-next',
+    prevEl: '.vrf-projects .swiper-button-prev',
+  },
+})
+
+projectsSlider.on('slideChange', function () {
+  $('.vrf-projects__pagination span').removeClass('active')
+  $('.vrf-projects__pagination span')
+    .eq(projectsSlider.activeIndex)
+    .addClass('active')
+})

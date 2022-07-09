@@ -2,6 +2,8 @@ import 'jquery-ui-bundle'
 import 'inputmask/dist/jquery.inputmask'
 import Swiper, {FreeMode, Navigation, Pagination} from 'swiper'
 
+$('input.phone').inputmask('+7(999)999-99-99')
+
 const vrfNavSwiper = new Swiper('.vrf-nav__slider', {
   modules: [FreeMode],
 

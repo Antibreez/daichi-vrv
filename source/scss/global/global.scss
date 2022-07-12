@@ -6,3 +6,12 @@
   cursor: default;
   pointer-events: none;
 }
+
+.btn:disabled {
+  background-color: #bbb;
+  border-color: #bbb;
+  color: #888;
+  fill: #888;
+  cursor: default;
+  pointer-events: none;
+}

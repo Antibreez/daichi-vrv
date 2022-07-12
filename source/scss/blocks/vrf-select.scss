@@ -19,15 +19,15 @@
   text-align: center;
 
   &:first-child {
-    padding-right: 45px;
+    padding-right: 60px;
   }
 
   &:nth-child(2) {
-    padding: 0 45px;
+    padding: 0 30px;
   }
 
   &:nth-child(3) {
-    padding-left: 45px;
+    padding-left: 60px;
   }
 }
 
@@ -144,6 +144,10 @@
   margin-top: 25px;
   width: 100%;
 
+  .select2-container {
+    margin: 0;
+  }
+
   input {
     margin: 0;
   }
@@ -154,6 +158,24 @@
 
   &.third {
     width: calc((100% - 50px) / 3);
+  }
+}
+
+.vrf-select__error {
+  display: none;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 5px;
+  color: #ff0000;
+}
+
+.vrf-select__form-input.error {
+  .vrf-select__error {
+    display: block;
+  }
+
+  input {
+    border-color: #ff0000;
   }
 }
 
@@ -177,4 +199,105 @@
 .vrf-select__form-submit {
   width: 294px;
   margin: 0;
+}
+
+@include tablet {
+  .vrf-select__form-block {
+    padding: 40px;
+  }
+}
+
+@include mobile {
+  .vrf-select__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+
+  .vrf-select__stages {
+    flex-direction: column;
+    margin: 0 0 150px;
+  }
+
+  .vrf-select__stage {
+    padding: 0;
+    width: 100%;
+    display: flex;
+
+    &:nth-child(n) {
+      padding: 0;
+
+      .vrf-select__stage-top {
+        margin-bottom: 0;
+
+        &:nth-child(n) {
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .vrf-select__stage-number {
+    flex-shrink: 0;
+    margin-right: 25px;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .vrf-select__stage-text {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .vrf-select__form-block {
+    margin-top: -120px;
+    padding: 24px;
+  }
+
+  .vrf-select__form-wrapper {
+    background-position: top 120px center;
+    padding-bottom: 60px;
+  }
+
+  .vrf-select__form-input {
+    &.half {
+      width: 100%;
+    }
+
+    &.third {
+      width: 100%;
+    }
+  }
+
+  .vrf-select__form-subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 25px;
+    text-align: center;
+  }
+
+  .vrf-select__form-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .vrf-select__form-submit {
+    margin: 0 0 25px;
+    width: 100%;
+  }
+
+  .vrf-select__form-policy {
+    padding-right: 0;
+  }
 }

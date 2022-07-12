@@ -23,3 +23,22 @@
     color: #00adef;
   }
 }
+
+@include mobile {
+  .vrf-nav {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .vrf-nav__item {
+    &:first-child {
+      margin-left: 16px;
+    }
+
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+}

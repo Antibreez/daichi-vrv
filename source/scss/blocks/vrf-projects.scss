@@ -19,6 +19,7 @@
   display: flex;
   min-height: 600px;
   background-color: #f7f7f7;
+  height: auto;
 }
 
 .vrf-projects__slider-img-block {
@@ -125,5 +126,69 @@
   .swiper-button-prev.swiper-button-disabled {
     opacity: 1;
     background-color: #dadada;
+  }
+}
+
+@media (max-width: 1599px) {
+  .vrf-projects__slider-img-block {
+    width: 50%;
+  }
+}
+
+@include tablet {
+  .vrf-projects__slider-item {
+    flex-direction: column;
+  }
+
+  .vrf-projects__slider-img-block {
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@include mobile {
+  .vrf-projects {
+    margin-bottom: 60px;
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .vrf-projects__slider-buttons {
+    display: none;
+  }
+
+  .vrf-projects__title-block {
+    margin: 0 16px 30px;
+  }
+
+  .vrf-projects__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .vrf-projects__slider-item {
+    width: calc((100% - 32px));
+    margin: 0 2.5px;
+  }
+
+  .vrf-projects__pagination {
+    margin: 0 16px;
+  }
+
+  .vrf-projects__slider-info {
+    padding: 24px;
   }
 }

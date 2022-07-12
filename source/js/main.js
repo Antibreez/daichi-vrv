@@ -41,7 +41,7 @@ $aboutTabs.on('click', function () {
   $(`#${name}`).show()
 })
 
-const howWorkSlider = new Swiper('#how-work-slider .swiper', {
+const howWorkSlider = new Swiper('#how-work-slider .vrf-about__slider', {
   modules: [Pagination, Navigation],
 
   navigation: {
@@ -56,7 +56,7 @@ const howWorkSlider = new Swiper('#how-work-slider .swiper', {
   },
 })
 
-const vrfTypesSwiper = new Swiper('#vrf-types-slider .swiper', {
+const vrfTypesSwiper = new Swiper('#vrf-types-slider .vrf-about__slider', {
   modules: [Pagination, Navigation],
 
   navigation: {
@@ -69,6 +69,16 @@ const vrfTypesSwiper = new Swiper('#vrf-types-slider .swiper', {
     type: 'bullets',
     dynamicBullets: true,
   },
+})
+
+const vrfAboutTextSlider = new Swiper('.vrf-about__tab-block-text-mobile', {
+  modules: [FreeMode],
+
+  freeMode: {
+    enabled: true,
+  },
+
+  slidesPerView: 'auto',
 })
 
 for (let i = 0; i < $('.vrf-projects__slider-item').length; i++) {
@@ -84,6 +94,9 @@ const projectsSlider = new Swiper('.vrf-projects__slider', {
     nextEl: '.vrf-projects .swiper-button-next',
     prevEl: '.vrf-projects .swiper-button-prev',
   },
+
+  slidesPerView: 'auto',
+  centeredSlides: true,
 })
 
 projectsSlider.on('slideChange', function () {
@@ -92,3 +105,116 @@ projectsSlider.on('slideChange', function () {
     .eq(projectsSlider.activeIndex)
     .addClass('active')
 })
+
+const vrfAboutSlider = new Swiper('.vrf-about__list-mobile-block', {
+  modules: [FreeMode],
+
+  freeMode: {
+    enabled: true,
+  },
+
+  slidesPerView: 'auto',
+})
+
+const $form = $('.vrf-select__form-wrapper form')
+const $phone = $('input[name="phone"]')
+const $email = $('input[name="email"]')
+const $name = $('input[name="name"]')
+const $btn = $('.vrf-select__form-submit')
+
+let isNameValid = false
+let isPhoneValid = false
+let isEmailValid = false
+
+let hasNameError = false
+let hasPhoneError = false
+let hasEmailError = false
+
+const emailRegExp = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
+
+const setError = $item => {
+  $item.parent().addClass('error')
+}
+
+const removeError = $item => {
+  $item.parent().removeClass('error')
+}
+
+const checkErrors = () => {
+  if (hasNameError || hasEmailError || hasPhoneError) {
+    $btn.attr('disabled', true)
+  } else {
+    $btn.removeAttr('disabled')
+  }
+}
+
+const setErrors = () => {
+  if (!isNameValid) {
+    setError($name)
+    hasNameError = true
+  }
+  if (!isEmailValid) {
+    setError($email)
+    hasEmailError = true
+  }
+  if (!isPhoneValid) {
+    setError($phone)
+    hasPhoneError = true
+  }
+}
+
+const onNameInput = () => {
+  removeError($name)
+  hasNameError = false
+  checkErrors()
+
+  if ($name.val().trim().length === 0) {
+    isNameValid = false
+  } else {
+    isNameValid = true
+  }
+
+  console.log('isNameValid', isNameValid)
+}
+
+const onEmailInput = () => {
+  removeError($email)
+  hasEmailError = false
+  checkErrors()
+
+  if ($email.val().trim().match(emailRegExp)) {
+    isEmailValid = true
+  } else {
+    isEmailValid = false
+  }
+}
+
+const onPhoneInput = () => {
+  removeError($phone)
+  hasPhoneError = false
+  checkErrors()
+
+  if ($phone.val().includes('_')) {
+    isPhoneValid = false
+  } else {
+    isPhoneValid = true
+  }
+}
+
+const onSubmit = e => {
+  e.preventDefault()
+
+  setErrors()
+
+  if (isNameValid && isEmailValid && isPhoneValid) {
+    $form.trigger('submit')
+  } else {
+    $btn.attr('disabled', true)
+  }
+}
+
+$name.on('input', onNameInput)
+
+$email.on('input', onEmailInput)
+$phone.on('input', onPhoneInput)
+$btn.on('click', onSubmit)

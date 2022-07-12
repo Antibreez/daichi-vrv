@@ -2369,6 +2369,14 @@ a.ui-button:active,
   -webkit-box-shadow: 0px 0px 5px #666666;
   box-shadow: 0px 0px 5px #666666; }
 
+.btn:focus:disabled {
+  background-color: #bbb;
+  border-color: #bbb;
+  color: #888;
+  fill: #888;
+  cursor: default;
+  pointer-events: none; }
+
 .vrf-about {
   padding-top: 120px;
   margin: 0 0 120px; }

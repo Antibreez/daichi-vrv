@@ -2385,6 +2385,9 @@ a.ui-button:active,
   cursor: default;
   pointer-events: none; }
 
+.swiper-pagination-bullet-active {
+  background: #00a1e4; }
+
 .vrf-about {
   padding-top: 120px;
   margin: 0 0 120px; }
@@ -2756,7 +2759,8 @@ a.ui-button:active,
   color: #888;
   text-decoration: none;
   border: none;
-  font-weight: 400; }
+  font-weight: 400;
+  white-space: nowrap; }
   .vrf-nav__link.active {
     color: #00adef; }
 
@@ -3377,10 +3381,6 @@ a.ui-button:active,
     -webkit-transition: border-color 0.2s;
     -o-transition: border-color 0.2s;
     transition: border-color 0.2s; }
-  .vrf-systems__item-unit-link:hover {
-    color: #fff; }
-    .vrf-systems__item-unit-link:hover span {
-      border-bottom: 1px solid #fff; }
   .vrf-systems__item-unit-link svg {
     color: #fff;
     position: absolute;

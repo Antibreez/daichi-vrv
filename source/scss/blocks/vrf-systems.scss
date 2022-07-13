@@ -100,14 +100,6 @@
     transition: border-color 0.2s;
   }
 
-  &:hover {
-    color: #fff;
-
-    span {
-      border-bottom: 1px solid #fff;
-    }
-  }
-
   svg {
     color: #fff;
     position: absolute;

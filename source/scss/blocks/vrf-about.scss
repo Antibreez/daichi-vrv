@@ -376,7 +376,9 @@
   }
 
   .vrf-about__preview {
-    //display: block;
+    display: none;
+    //display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -386,19 +388,11 @@
     z-index: 100;
     overflow: auto;
 
-    &::after {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-    }
-
     img {
-      display: inline-block;
       width: 100%;
       height: auto;
       max-width: none;
-      vertical-align: middle;
+      transform-origin: left center;
     }
 
     button {
@@ -416,7 +410,7 @@
     }
 
     &.opened {
-      display: block;
+      display: flex;
     }
   }
 }

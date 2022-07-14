@@ -387,6 +387,7 @@
     background-color: #fff;
     z-index: 100;
     overflow: auto;
+    touch-action: auto !important;
 
     img {
       width: 100%;

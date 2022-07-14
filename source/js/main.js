@@ -239,7 +239,7 @@ if ($preview.length > 0) {
 
   mc.on('pinch', function (e) {
     const delta = e.scale - 1
-    scale += delta
+    scale += delta / 10
     scale = scale >= 1 ? scale : 1
     $img.css('transform', `scale(${scale})`)
   })

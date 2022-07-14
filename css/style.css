@@ -2657,9 +2657,7 @@ a.ui-button:active,
     height: 100vh;
     background-color: #fff;
     z-index: 100;
-    overflow: auto;
-    -ms-touch-action: auto !important;
-        touch-action: auto !important; }
+    overflow: auto; }
     .vrf-about__preview img {
       width: 100%;
       height: auto;

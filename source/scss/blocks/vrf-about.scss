@@ -376,7 +376,7 @@
   }
 
   .vrf-about__preview {
-    display: block;
+    //display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -413,6 +413,10 @@
       position: fixed;
       top: 16px;
       right: 16px;
+    }
+
+    &.opened {
+      display: block;
     }
   }
 }

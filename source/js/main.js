@@ -218,3 +218,33 @@ $name.on('input', onNameInput)
 $email.on('input', onEmailInput)
 $phone.on('input', onPhoneInput)
 $btn.on('click', onSubmit)
+
+const $slide = $('.vrf-about__slide')
+const $preview = $('.vrf-about__preview')
+const $img = $preview.find('img')
+const $close = $preview.find('button')
+
+$slide.on('click', function () {
+  if ($(window).outerWidth() > 767) return
+  const src = $(this).find('img').attr('src')
+
+  $img.attr('src', src)
+  $preview.addClass('opened')
+  $('body').addClass('no-scroll')
+})
+
+$close.on('click', function () {
+  $preview.removeClass('opened')
+  $('body').removeClass('no-scroll')
+})
+
+$preview.on('click', function () {
+  $preview.removeClass('opened')
+  $('body').removeClass('no-scroll')
+})
+
+$(window).on('resize', function () {
+  if ($(this).outerWidth() > 767) {
+    $(this).removeClass('no-scroll')
+  }
+})

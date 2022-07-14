@@ -226,6 +226,8 @@ const $img = $preview.find('img')
 const $close = $preview.find('button')
 
 let scale = 1
+let x = 0
+let y = 0
 
 if ($preview.length > 0) {
   $('head').append(
@@ -234,14 +236,21 @@ if ($preview.length > 0) {
 
   const mc = new Hammer.Manager($preview[0])
   const pinch = new Hammer.Pinch()
+  const pan = new Hammer.Pan()
 
-  mc.add(pinch)
+  pinch.recognizeWith(pan)
 
-  mc.on('pinch', function (e) {
+  mc.add([pinch, pan])
+
+  mc.on('pinch pan', function (e) {
     const delta = e.scale - 1
+    const dX = e.deltaX
+    const dY = e.deltaY
+    x += dX
+    y += dY
     scale += delta
     scale = scale >= 1 ? scale : 1
-    $img.css('transform', `scale(${scale})`)
+    $img.css('transform', `scale(${scale}) translate(${x}px, ${y}px)`)
   })
 }
 
@@ -259,7 +268,9 @@ $close.on('click', function () {
   $('body').removeClass('no-scroll')
 
   scale = 1
-  $img.css('transform', `scale(1)`)
+  x = 0
+  y = 0
+  $img.css('transform', `scale(1) translate(0, 0)`)
 })
 
 $preview.on('click', function () {
@@ -267,7 +278,9 @@ $preview.on('click', function () {
   $('body').removeClass('no-scroll')
 
   scale = 1
-  $img.css('transform', `scale(1)`)
+  x = 0
+  y = 0
+  $img.css('transform', `scale(1) translate(0, 0)`)
 })
 
 $(window).on('resize', function () {

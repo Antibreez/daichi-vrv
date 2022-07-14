@@ -1,6 +1,7 @@
 import 'jquery-ui-bundle'
 import 'inputmask/dist/jquery.inputmask'
 import Swiper, {FreeMode, Navigation, Pagination} from 'swiper'
+import Hammer from 'hammerjs'
 
 $('input.phone').inputmask('+7(999)999-99-99')
 
@@ -224,6 +225,26 @@ const $preview = $('.vrf-about__preview')
 const $img = $preview.find('img')
 const $close = $preview.find('button')
 
+let scale = 1
+
+if ($preview.length > 0) {
+  $('head').append(
+    `<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">`
+  )
+
+  const mc = new Hammer.Manager($preview[0])
+  const pinch = new Hammer.Pinch()
+
+  mc.add(pinch)
+
+  mc.on('pich', function (e) {
+    const delta = e.scale - 1
+    scale += delta
+    scale = scale >= 1 ? scale : 1
+    $img.css('transform', `scale(${scale})`)
+  })
+}
+
 $slide.on('click', function () {
   if ($(window).outerWidth() > 767) return
   const src = $(this).find('img').attr('src')
@@ -236,11 +257,17 @@ $slide.on('click', function () {
 $close.on('click', function () {
   $preview.removeClass('opened')
   $('body').removeClass('no-scroll')
+
+  scale = 1
+  $img.css('transform', `scale(1)`)
 })
 
 $preview.on('click', function () {
   $preview.removeClass('opened')
   $('body').removeClass('no-scroll')
+
+  scale = 1
+  $img.css('transform', `scale(1)`)
 })
 
 $(window).on('resize', function () {

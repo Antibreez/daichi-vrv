@@ -2523,6 +2523,9 @@ a.ui-button:active,
     .vrf-about__tab-block-text.half > ul > li:not(:nth-child(2n)) {
       margin-right: 15px; }
 
+.vrf-about__preview {
+  display: none; }
+
 @media (max-width: 1199px) {
   .vrf-about__item {
     width: calc((100% - 15px) / 2); }
@@ -2641,7 +2644,40 @@ a.ui-button:active,
       .vrf-about__tab-block-mobile-slide ul > li {
         font-size: 15px;
         line-height: 23px;
-        list-style-position: outside; } }
+        list-style-position: outside; }
+  .vrf-about__preview {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    overflow: auto; }
+    .vrf-about__preview::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+    .vrf-about__preview img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      vertical-align: middle; }
+    .vrf-about__preview button {
+      padding: 0;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      height: auto;
+      font-size: 0;
+      line-height: 0;
+      position: fixed;
+      top: 16px;
+      right: 16px; } }
 
 .vrf-area {
   margin: 0 0 90px; }

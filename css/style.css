@@ -2646,6 +2646,10 @@ a.ui-button:active,
         line-height: 23px;
         list-style-position: outside; }
   .vrf-about__preview {
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -2654,17 +2658,13 @@ a.ui-button:active,
     background-color: #fff;
     z-index: 100;
     overflow: auto; }
-    .vrf-about__preview::after {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle; }
     .vrf-about__preview img {
-      display: inline-block;
       width: 100%;
       height: auto;
       max-width: none;
-      vertical-align: middle; }
+      -webkit-transform-origin: left center;
+          -ms-transform-origin: left center;
+              transform-origin: left center; }
     .vrf-about__preview button {
       padding: 0;
       margin: 0;
@@ -2678,7 +2678,9 @@ a.ui-button:active,
       top: 16px;
       right: 16px; }
     .vrf-about__preview.opened {
-      display: block; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .vrf-area {
   margin: 0 0 90px; }

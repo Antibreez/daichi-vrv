@@ -172,6 +172,10 @@
   }
 }
 
+.vrf-about__preview {
+  display: none;
+}
+
 @include tablet {
   .vrf-about__item {
     width: calc((100% - 15px) / 2);
@@ -368,6 +372,47 @@
         line-height: 23px;
         list-style-position: outside;
       }
+    }
+  }
+
+  .vrf-about__preview {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    overflow: auto;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      vertical-align: middle;
+    }
+
+    button {
+      padding: 0;
+      margin: 0;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      height: auto;
+      font-size: 0;
+      line-height: 0;
+      position: fixed;
+      top: 16px;
+      right: 16px;
     }
   }
 }

@@ -2646,7 +2646,6 @@ a.ui-button:active,
         line-height: 23px;
         list-style-position: outside; }
   .vrf-about__preview {
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -2677,7 +2676,9 @@ a.ui-button:active,
       line-height: 0;
       position: fixed;
       top: 16px;
-      right: 16px; } }
+      right: 16px; }
+    .vrf-about__preview.opened {
+      display: block; } }
 
 .vrf-area {
   margin: 0 0 90px; }

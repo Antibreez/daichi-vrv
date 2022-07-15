@@ -244,18 +244,33 @@ if ($preview.length > 0) {
 
   mc.on('pinch pan', function (e) {
     const delta = e.scale - 1
-    const dX = e.deltaX
-    const dY = e.deltaY
+    let dX = e.deltaX
+    let dY = e.deltaY
 
-    console.log(e.deltaX, e.deltaY)
-    console.log(x, y)
+    // console.log(
+    //   'right',
+    //   $img.offset().left + $img.outerWidth() - $(window).outerWidth() + e.deltaX
+    // )
+    // console.log('left', $img.offset().left + e.deltaX)
+
+    // if (
+    //   $img.offset().left + e.deltaX > 0 ||
+    //   $img.offset().left +
+    //     $img.outerWidth() -
+    //     $(window).outerWidth() +
+    //     e.deltaX <
+    //     0
+    // ) {
+    //   dX = 0
+    // }
+
+    // console.log(dX)
     // scale += delta
     // scale = scale >= 1 ? scale : 1
     $img.css(
       'transform',
-      `scale(${scale + delta >= 1 ? scale + delta : 1}) translate(${
-        x + dX
-      }px, ${y + dY}px)`
+      `translate(${x + dX}px, ${y + dY}px)
+      scale(${scale + delta >= 1 ? scale + delta : 1})`
     )
   })
 
@@ -286,7 +301,7 @@ $close.on('click', function () {
   scale = 1
   x = 0
   y = 0
-  $img.css('transform', `scale(1) translate(0, 0)`)
+  $img.css('transform', `translate(0, 0) scale(1)`)
 })
 
 $preview.on('click', function () {
@@ -296,7 +311,7 @@ $preview.on('click', function () {
   scale = 1
   x = 0
   y = 0
-  $img.css('transform', `scale(1) translate(0, 0)`)
+  $img.css('transform', `translate(0, 0) scale(1)`)
 })
 
 $(window).on('resize', function () {

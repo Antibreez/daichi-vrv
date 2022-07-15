@@ -316,6 +316,6 @@ $preview.on('click', function () {
 
 $(window).on('resize', function () {
   if ($(this).outerWidth() > 767) {
-    $(this).removeClass('no-scroll')
+    $('body').removeClass('no-scroll')
   }
 })

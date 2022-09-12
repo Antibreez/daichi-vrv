@@ -2911,39 +2911,35 @@ button.action-modal__close {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: -90px; }
+  margin-top: -40px; }
 
 .vrf-area__item {
   list-style: none;
-  width: calc((100% - 180px) / 3);
-  margin-top: 90px;
+  width: calc((100% - 80px) / 3);
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 0; }
   .vrf-area__item:not(:nth-child(3n)) {
-    margin-right: 90px; }
+    margin-right: 40px; }
 
 .vrf-area__item-img {
-  width: 300px;
-  height: auto;
-  max-width: 90%;
-  margin: 0 0 50px; }
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 24px; }
 
 .vrf-area__item-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 400;
-  margin: 0 0 10px;
-  -ms-flex-item-align: stretch;
-      align-self: stretch; }
+  margin: 0; }
 
 .vrf-area__item-desc {
   font-size: 15px;
@@ -2952,13 +2948,18 @@ button.action-modal__close {
       align-self: stretch;
   margin: 0; }
 
+@media (max-width: 1599px) {
+  .vrf-area__item-title {
+    font-size: 16px;
+    line-height: 19px; } }
+
 @media (max-width: 1199px) {
   .vrf-area__item {
-    width: calc((100% - 80px) / 3); }
-    .vrf-area__item:not(:nth-child(3n)) {
-      margin-right: 40px; }
-  .vrf-area__item-img {
-    max-width: 100%; } }
+    width: calc((100% - 40px) / 2); }
+    .vrf-area__item:nth-child(n) {
+      margin-right: 0; }
+    .vrf-area__item:not(:nth-child(2n)) {
+      margin-right: 40px; } }
 
 @media (max-width: 767px) {
   .vrf-area {
@@ -2979,12 +2980,10 @@ button.action-modal__close {
     .vrf-area__item:nth-child(n) {
       margin-right: 0; }
     .vrf-area__item:not(:last-child) {
-      margin-bottom: 30px; }
+      margin-bottom: 40px; }
   .vrf-area__item-img {
-    width: 214px;
-    height: auto; }
-  .vrf-area__item-title {
-    text-align: center; }
+    width: 80px;
+    height: 80px; }
   .vrf-area__item-desc {
     text-align: center; } }
 
